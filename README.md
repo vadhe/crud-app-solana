@@ -21,7 +21,7 @@ Before starting, make sure you have the following tools installed:
 
 - [Node.js](https://nodejs.org) (v18+ recommended)
 - [pnpm](https://pnpm.io) – install via: `npm install -g pnpm`
-- [Mucho](https://mucho.dev) – CLI tool to manage Solana + Anchor setups
+- [Mucho](https://github.com/solana-foundation/mucho) – CLI tool to manage Solana + Anchor setups
 
 ---
 
