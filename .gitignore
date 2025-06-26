@@ -35,3 +35,4 @@ dist-ssr
 /anchor/target/test-ledger
 /anchor/target/.rustc_info.json
 /test-ledger
+.env

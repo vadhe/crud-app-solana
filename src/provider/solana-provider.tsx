@@ -17,7 +17,11 @@ export const SolanaProvider: FC<SolanaProviderProps> = ({ children }) => {
   const network = WalletAdapterNetwork.Devnet;
 
   // You can also provide a custom RPC endpoint
-  const endpoint = useMemo(() => clusterApiUrl(network), [network]);
+  // const endpoint = useMemo(() => clusterApiUrl(network), [network]);
+  const endpoint = useMemo(() => {
+    const isLocal = import.meta.env.VITE_PUBLIC_SOLANA_LOCAL === "true";
+    return isLocal ? "http://127.0.0.1:8899" : clusterApiUrl(network);
+  }, [network]);
 
   return (
     <ConnectionProvider endpoint={endpoint}>

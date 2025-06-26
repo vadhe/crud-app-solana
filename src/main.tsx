@@ -4,12 +4,14 @@ import './index.css'
 import App from './app.tsx'
 import { ReactQueryProvider } from '@/provider/react-query-provider.tsx'
 import { SolanaProvider } from '@/provider/solana-provider.tsx'
+import { Toaster } from 'sonner'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ReactQueryProvider>
       <SolanaProvider>
         <App />
+        <Toaster />
       </SolanaProvider>
     </ReactQueryProvider>
   </StrictMode>,
